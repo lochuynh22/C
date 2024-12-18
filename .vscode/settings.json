@@ -1,5 +1,13 @@
 {
+    "files.exclude": {
+        "**/*.exe": true
+    },
+    "search.exclude": {
+        "**/*.exe": true
+    },
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "bt8_c": "cpp"
     }
 }
+
