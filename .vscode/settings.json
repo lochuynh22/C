@@ -7,7 +7,10 @@
     },
     "files.associations": {
         "stdio.h": "c",
-        "bt8_c": "cpp"
+        "bt8_c": "cpp",
+        "stdlib.h": "c",
+        "iostream": "cpp",
+        "pra_6": "cpp"
     }
 }
 

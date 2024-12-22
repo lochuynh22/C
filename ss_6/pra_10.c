@@ -24,6 +24,4 @@ int main(){
     return 0;
 }
 
-
-
 //c= a-1 +b-2;

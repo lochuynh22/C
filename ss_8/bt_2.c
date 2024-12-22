@@ -12,6 +12,7 @@ int main(){
             if(arr_1[i][j]==check_1){
                 printf("vi tri phan tu trong mang la:arr_1[%d][%d]\n",i,j);
                 found=1;
+                break;
             }
         }
     }
