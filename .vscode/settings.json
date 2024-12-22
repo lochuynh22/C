@@ -11,6 +11,7 @@
         "stdlib.h": "c",
         "iostream": "cpp",
         "pra_6": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
 
