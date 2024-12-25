@@ -9,6 +9,7 @@ int main() {
     }
     printf("\n");
     printf("Do dai cua mang la: %d\n", sizeofarr);
+    printf("%d",arr[1]);
 
     return 0;
 }

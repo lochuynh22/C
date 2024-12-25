@@ -1,1 +1,0 @@
-printf("Vui long chon tu 1-8");

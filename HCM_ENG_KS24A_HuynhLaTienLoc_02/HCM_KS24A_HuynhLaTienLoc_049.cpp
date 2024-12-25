@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Hàm d? nh?p các ph?n t? c?a m?ng
 void nhapMang(int arr[], int *n) {
     printf("Nhap so phan tu cua mang: ");
     scanf("%d", n);
@@ -11,15 +10,13 @@ void nhapMang(int arr[], int *n) {
     }
 }
 
-// Hàm d? hi?n th? các ph?n t? c?a m?ng
 void hienThiMang(int arr[], int n) {
     printf("Cac gia tri cua mang: ");
     for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+        printf("arr[%d]=%d\n", i, arr[i]);
     }
     printf("\n");
 }
-
 
 int demPhanTuChan(int arr[], int n) {
     int count = 0;
@@ -30,7 +27,6 @@ int demPhanTuChan(int arr[], int n) {
     }
     return count;
 }
-
 
 int timGiaTriLonThuHai(int arr[], int n) {
     int first = arr[0], second = -1;
@@ -44,7 +40,6 @@ int timGiaTriLonThuHai(int arr[], int n) {
     }
     return second;
 }
-
 
 void themPhanTuDauMang(int arr[], int *n, int value) {
     for (int i = *n; i > 0; i--) {
@@ -65,56 +60,6 @@ void xoaPhanTuTaiViTri(int arr[], int *n, int pos) {
     (*n)--;
 }
 
-void sapXepGiamDanInsertionSort(int arr[], int n) {
-    for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] < key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
-}
-
-int binarySearch(int arr[], int n, int x) {
-    int left = 0, right = n - 1;
-    while (left <= right) {
-        int mid = (left + right) / 2;
-        if (arr[mid] == x) {
-            return mid; 
-        }
-        if (arr[mid] < x) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1; 
-}
-
-bool isPrime(int num) {
-    if (num <= 1) return false;
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) return false;
-    }
-    return true;
-}
-
-
-void inSoNguyenToVaBinhPhuong(int arr[], int n) {
-    bool found = false;
-    for (int i = 0; i < n; i++) {
-        if (isPrime(arr[i])) {
-            found = true;
-            printf("So nguyen to: %d, Binh phuong: %d\n", arr[i], arr[i] * arr[i]);
-        }
-    }
-    if (!found) {
-        printf("Khong co so nguyen to nao trong mang.\n");
-    }
-}
-
 void sapXepGiamDanBubbleSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -128,7 +73,7 @@ void sapXepGiamDanBubbleSort(int arr[], int n) {
 }
 
 int main() {
-    int arr[100]; 
+    int arr[100];  
     int n = 0, c;
 
     do {
@@ -172,28 +117,8 @@ int main() {
                 scanf("%d", &pos);
                 xoaPhanTuTaiViTri(arr, &n, pos);
                 break;
-            case 7:
-                sapXepGiamDanInsertionSort(arr, n);
-                break;
-            case 8:
-                int x;
-                printf("Nhap gia tri can tim: ");
-                scanf("%d", &x);
-                int result = binarySearch(arr, n, x);
-                if (result != -1) {
-                    printf("Gia tri %d co trong mang tai vi tri %d\n", x, result);
-                } else {
-                    printf("Gia tri %d khong co trong mang\n", x);
-                }
-                break;
-            case 9:
-                inSoNguyenToVaBinhPhuong(arr, n);
-                break;
             case 10:
                 sapXepGiamDanBubbleSort(arr, n);
-                break;
-            case 11:
-                printf("Thoat chuong trinh.\n");
                 break;
             default:
                 printf("Lua chon khong hop le. Vui long chon lai.\n");
@@ -203,3 +128,4 @@ int main() {
 
     return 0;
 }
+
