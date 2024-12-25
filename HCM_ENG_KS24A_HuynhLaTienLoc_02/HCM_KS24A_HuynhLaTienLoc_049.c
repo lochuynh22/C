@@ -18,14 +18,15 @@ void hienThiMang(int arr[], int n) {
     printf("\n");
 }
 
-int demPhanTuChan(int arr[], int n) {
-    int count = 0;
+void demChanLe(int arr[], int n) {
+    int chan = 0, le = 0;
     for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) {
-            count++;
+            chan++;
+        } else {
+            le++;
         }
     }
-    return count;
 }
 
 int timGiaTriLonThuHai(int arr[], int n) {
@@ -100,7 +101,7 @@ int main() {
                 hienThiMang(arr, n);
                 break;
             case 3:
-                printf("So luong phan tu chan trong mang: %d\n", demPhanTuChan(arr, n));
+                demChanLe(arr, n);
                 break;
             case 4:
                 printf("Gia tri lon thu hai trong mang: %d\n", timGiaTriLonThuHai(arr, n));
@@ -128,4 +129,3 @@ int main() {
 
     return 0;
 }
-
