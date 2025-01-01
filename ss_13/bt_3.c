@@ -33,7 +33,7 @@ i==0 && j==0||i==0 && j==col_1-1||i ==row_1-1 && j==0||i==row_1-1&&j==col_1-1*/
 void ingocmatran(int arr_1[][100],int row_1,int col_1){
     for(int i=0;i<row_1;i++){
         for (int j=0;j<col_1;j++){
-            if(i==0 && j==0||i==0 && j==col_1-1||i ==row_1-1 && j==0||i==row_1-1&&j==col_1-1)
+            if(i==0 && j==0 || i==0 && j==col_1-1 || i ==row_1-1 && j==0|| i==row_1-1 && j==col_1-1)
             printf("%d",arr_1[i][j]);
             else 
             printf(" ");
