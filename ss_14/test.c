@@ -13,7 +13,7 @@ int countCharacters(char str[]) {
         count++;
     }
     return count;
-}
+}   
 int countOccurrences(char str[], char c) {
     int count = 0;
     for (int i = 0; str[i] != '\0'; i++) {
