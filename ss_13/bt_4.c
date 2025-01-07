@@ -38,12 +38,12 @@ int suamang(int n, int loca, int value, int arr_1[]){
     arr_1[loca] = value;
     return n;
 }
-int xoaphantu(int n, int loca, int value, int arr_1[])Ơ
+int xoaphantu(int n, int loca, int value, int arr_1[]){
+
     if (loca < 0 || loca >= 5) {
-        printf("Vi tri khong hop le.\n");
+        printf("Vi tri khong hop le.\n");}
         return 0;
-
-
+}
 int main() {
     int arr_1[100], n, c, loca, value;
 
