@@ -9,7 +9,7 @@ int prime(int a){
 }
 
 
-void nhapmang(int arr_1[][100], int row, int col) {
+void nhapMang(int arr_1[][100], int row, int col) {
     printf("Lan luot nhap cac gia tri cua mang:\n");
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
@@ -18,7 +18,7 @@ void nhapmang(int arr_1[][100], int row, int col) {
         }
     }
 }
-void inmatran(int arr_1[][100],int row_1,int col_1){
+void inMaTran(int arr_1[][100],int row_1,int col_1){
     for(int i=0;i<row_1;i++){
         for (int j=0;j<col_1;j++){
             printf("%d ", arr_1[i][j]);
@@ -30,7 +30,7 @@ void inmatran(int arr_1[][100],int row_1,int col_1){
 i==0 && j==0||i==0 && j==col_1-1||i ==row_1-1 && j==0||i==row_1-1&&j==col_1-1*/
 
 
-void ingocmatran(int arr_1[][100],int row_1,int col_1){
+void inGocMaTran(int arr_1[][100],int row_1,int col_1){
     for(int i=0;i<row_1;i++){
         for (int j=0;j<col_1;j++){
             if(i==0 && j==0 || i==0 && j==col_1-1 || i ==row_1-1 && j==0|| i==row_1-1 && j==col_1-1)
@@ -43,7 +43,7 @@ void ingocmatran(int arr_1[][100],int row_1,int col_1){
 }
 /*bien ma tran
 i==0||i==row_1-1||j==0||j==col_1-1*/
-void inbienmatran(int arr_1[][100],int row_1,int col_1){
+void inBienMaTran(int arr_1[][100],int row_1,int col_1){
     for(int i=0;i<row_1;i++){
         for (int j=0;j<col_1;j++){
             if(i==0||i==row_1-1||j==0||j==col_1-1)
@@ -60,7 +60,7 @@ cheo phu
 j-i-1
 */
 
-void incheochinhphu(int arr_1[][100],int row_1,int col_1){
+void inCheoChinhPhu(int arr_1[][100],int row_1,int col_1){
     float check=(row_1+col_1)/2;
     for(int i=0;i<row_1;i++){
         for (int j=0;j<col_1;j++){
@@ -93,19 +93,19 @@ int main() {
             case 1:
                 printf("Nhap so hang va so cot cua mang: ");
                 scanf("%d %d", &row, &col);
-                nhapmang(arr_1, row, col);
+                nhapMang(arr_1, row, col);
                 break;
             case 2:
-                inmatran( arr_1, row, col);
+                inMaTran( arr_1, row, col);
                 break;
             case 3:
-                ingocmatran( arr_1, row, col);
+                inGocMaTran( arr_1, row, col);
                 break;
             case 4:
-                inbienmatran( arr_1, row, col);
+                inBienMaTran( arr_1, row, col);
                 break;
             case 5:
-                incheochinhphu( arr_1, row, col);
+                inCheoChinhPhu( arr_1, row, col);
                 break;
             case 6:
                 for(int i=0;i<row;i++){
