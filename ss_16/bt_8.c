@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void daoChuoi(char *a, char *b, int size) {
     for (int i = 0; i < size; i++) {
@@ -9,8 +10,8 @@ void daoChuoi(char *a, char *b, int size) {
 }
 
 int main() {
-    char inputString[100];
-    char reverseString[100];
+    char *inputString = (char*)malloc(100 * sizeof(char));
+    char *reverseString = (char*)malloc(100 * sizeof(char));
 
     printf("Nhap vao mot chuoi bat ki: ");
     fgets(inputString, 100, stdin);
@@ -21,6 +22,9 @@ int main() {
     int length = strlen(inputString);
     daoChuoi(inputString, reverseString, length);
     printf("Chuoi dao nguoc la: %s\n", reverseString);
+
+    free(inputString);
+    free(reverseString);
 
     return 0;
 }
