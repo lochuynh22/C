@@ -1,5 +1,5 @@
 #include <stdio.h>
-//(Bubble Sort)
+//(Bubble Sort)so sanh tung cap phan tu lien tiep nhau 
 int main() {
     int arr_1[] = {5, 3, 9, 3, 10, 1};
     int n = sizeof(arr_1) / sizeof(int);

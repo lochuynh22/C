@@ -14,6 +14,7 @@ int main(){
     int n=sizeof(arr_1)/sizeof(int);
     int max_1=SoLonNhat(arr_1,n);
     printf("SO lon nhat cua mang la: %d", max_1);
+    printf("Loc la con cho gau gau");
 
     return 0;
 }

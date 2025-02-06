@@ -14,15 +14,29 @@ int bs(int a[], int n,int x){
     return 0;
     
 }   
-
-int main(){
-    int n,x;
-    scanf("%d %d",&n,&x);
-    int a[n];
-        for(int i=0;i<n;i++){
-            scanf("%d", &a[i]);
+void swp(int *a, int *b){
+    int tmp=*a;
+        *a=*b;
+        *b=tmp;
+}
+void bbs(int a[], int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(a[i]>a[i+1])
+            swp(&a[j],&a[j+1]);
         }
-    printf("%d",bs(a,n,x));
+    }
+}
+int main(){
+    int x=10;
+    int arr_1[]={10,4,4,5,7,2,1,5};
+    int n=sizeof(arr_1)/sizeof(int);
+    bbs(arr_1, n);
+    if(bs(arr_1, n,x)){
+        printf("tim thay!\n");
+    }
+    else 
+        printf("Ko thay\n");
 
     return 0;
 }
